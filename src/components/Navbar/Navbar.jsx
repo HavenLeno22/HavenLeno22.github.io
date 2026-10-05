@@ -27,7 +27,14 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50);
 
       if (location.pathname !== '/') return;
-      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'github', 'certifications', 'contact'];
+      // Linked sections in page order. Education and GitHub sit between Skills and Contact,
+      // so Skills stays highlighted there.
+      const sections = navLinks.map((link) => link.href.substring(2));
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {

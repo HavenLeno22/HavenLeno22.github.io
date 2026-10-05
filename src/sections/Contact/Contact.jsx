@@ -96,7 +96,7 @@ Reply to: ${data.get('email')}`;
               </div>
               
               <MagneticButton className="contact__submit-btn">
-                Send Message
+                Open in email app
                 <Mail size={18} />
               </MagneticButton>
             </form>
