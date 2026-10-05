@@ -135,8 +135,8 @@
         '</button>' +
       '</div>' +
       '<dl class="brief__grid">' +
+        '<div><dt>Internship</dt><dd>MERN Stack Developer Intern, GenLab, Jun to Aug 2026<span class="small">Certificate GL/INT/26/183</span></dd></div>' +
         '<div><dt>Education</dt><dd>B.Tech Computer Science and Engineering, SRM IST Ramapuram, 2024 to 2028<span class="small">CGPA 7.78</span></dd></div>' +
-        '<div><dt>Experience</dt><dd>MERN Stack Developer Intern, GenLab, Jun to Aug 2026</dd></div>' +
         '<div><dt>Award</dt><dd>Winner, Implementation Category, Sensora 2.0 at VIT Vellore, 2026</dd></div>' +
         '<div class="brief__work"><dt>Best work</dt><dd><ul>' +
           '<li><a href="/work/surgeguard/">SurgeGuard</a><span>Real-time crowd-safety platform: computer vision, FastAPI, React, Arduino</span></li>' +
@@ -171,8 +171,8 @@
   function go(url) { return function () { location.href = url; }; }
   function section(id) { return onHome ? go("#" + id) : go("/#" + id); }
   var commands = [
+    { group: "Go to", label: "Experience", hint: "MERN internship at GenLab", run: section("experience") },
     { group: "Go to", label: "Selected work", run: section("work") },
-    { group: "Go to", label: "Experience", run: section("experience") },
     { group: "Go to", label: "Hackathons and awards", run: section("recognition") },
     { group: "Go to", label: "Skills", run: section("skills") },
     { group: "Go to", label: "Education", run: section("education") },
