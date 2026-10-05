@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts (latin subset, variable weight). */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/fonts/space-grotesk.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/inter.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+/* ============================================
+   PREMIUM PORTFOLIO — GLOBAL STYLES
+   ============================================ */
+
+/* --- Theme CSS Custom Properties --- */
+:root {
+  /* Dark Mode (Default) - Rich Dark with Gold */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #252525;
+  --border-subtle: rgba(245, 195, 81, 0.1);
+  --border-medium: rgba(245, 195, 81, 0.15);
+  --text-primary: #FFFFFF;
+  --text-secondary: #E8E8E8;
+  --text-tertiary: #A8A8A8;
+  --accent-purple: #F5C351;
+  --accent-blue: #F5C351;
+  --accent-gold: #F5C351;
+  --accent-gradient: linear-gradient(135deg, #F5C351, #FFFFFF);
+  --accent-gradient-hover: linear-gradient(135deg, #FFD966, #FFFFFF);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-glow-purple: 0 0 40px rgba(245, 195, 81, 0.2);
+  --shadow-glow-blue: 0 0 40px rgba(245, 195, 81, 0.2);
+  --shadow-glow-gold: 0 0 40px rgba(245, 195, 81, 0.25);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --navbar-height: 72px;
+}
+
+[data-theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9F9F9;
+  --bg-card: #FFFFFF;
+  --border-subtle: rgba(245, 195, 81, 0.15);
+  --border-medium: rgba(245, 195, 81, 0.25);
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #8a8a8a;
+  --accent-gold: #D4A644;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-glow-purple: 0 0 40px rgba(212, 166, 68, 0.15);
+  --shadow-glow-blue: 0 0 40px rgba(212, 166, 68, 0.15);
+  --shadow-glow-gold: 0 0 40px rgba(212, 166, 68, 0.2);
+  --accent-gradient: linear-gradient(135deg, #D4A644, #1a1a1a);
+  --accent-gradient-hover: linear-gradient(135deg, #E8B855, #2a2a2a);
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* --- Utility Classes --- */
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-text {
+  color: var(--accent-gold);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-gradient);
+}
+
+.premium-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  transition: all var(--transition-base);
+}
+
+.premium-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* --- Gradient Border Effect --- */
+.gradient-border-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  padding: 1px;
+  background: var(--accent-gradient);
+}
+
+.gradient-border-wrapper > * {
+  border-radius: calc(var(--radius-xl) - 1px);
+}
+
+/* --- Grid Pattern Background --- */
+.grid-pattern {
+  background-image: 
+    linear-gradient(var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .section-container {
+    padding: 0 16px;
+  }
+}
+
+/* Slide-in animations start off-screen; never let that widen the page on phones. */
+html,
+body {
+  overflow-x: clip;
+}

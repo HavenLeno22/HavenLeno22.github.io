@@ -1,0 +1,14 @@
+.text-reveal-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-reveal-mask {
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.text-reveal-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+}

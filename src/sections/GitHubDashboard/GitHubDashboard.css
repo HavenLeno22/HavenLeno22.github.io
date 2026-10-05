@@ -1,0 +1,361 @@
+.github {
+  position: relative;
+}
+
+.github__title {
+  margin-bottom: 60px;
+}
+
+.github__dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Profile Card */
+.github__profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+}
+
+.github__profile-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.github__profile-avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.github__profile-avatar-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.5;
+  animation: pulse-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.3; filter: blur(8px); }
+  100% { opacity: 0.7; filter: blur(14px); }
+}
+
+.github__profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.github__profile-avatar-fallback {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  border: 2px solid var(--border-subtle);
+}
+
+.github__profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.github__profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.github__profile-login {
+  color: var(--text-tertiary);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.github__profile-bio {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  max-width: 500px;
+}
+
+.github__profile-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.github__profile-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.github__profile-stat strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.github__profile-btn {
+  border-radius: var(--radius-full);
+  background: var(--accent-gradient);
+  padding: 1px;
+  flex-shrink: 0;
+}
+
+.github__profile-btn-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: calc(var(--radius-full) - 1px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.github__profile-btn:hover .github__profile-btn-link {
+  background: transparent;
+  color: #1a1a1a;
+}
+[data-theme="light"] .github__profile-btn:hover .github__profile-btn-link {
+  color: #ffffff;
+}
+
+/* Heatmap Card */
+.github__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.github__card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.github__heatmap-wrapper {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.github__heatmap {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  min-width: 750px;
+}
+
+.github__heatmap-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.github__heatmap-cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--border-subtle);
+  border: 1px solid rgba(255,255,255,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.github__heatmap-cell:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.github__heatmap-cell--0 { background: var(--bg-secondary); }
+.github__heatmap-cell--1 { background: rgba(245, 195, 81, 0.2); }
+.github__heatmap-cell--2 { background: rgba(245, 195, 81, 0.45); }
+.github__heatmap-cell--3 { background: rgba(245, 195, 81, 0.75); }
+.github__heatmap-cell--4 { background: rgba(245, 195, 81, 1); box-shadow: 0 0 8px rgba(245, 195, 81, 0.5); }
+
+[data-theme="light"] .github__heatmap-cell--0 { background: var(--border-medium); }
+[data-theme="light"] .github__heatmap-cell--1 { background: rgba(212, 166, 68, 0.3); }
+[data-theme="light"] .github__heatmap-cell--2 { background: rgba(212, 166, 68, 0.55); }
+[data-theme="light"] .github__heatmap-cell--3 { background: rgba(212, 166, 68, 0.85); }
+[data-theme="light"] .github__heatmap-cell--4 { background: rgba(212, 166, 68, 1); box-shadow: 0 0 8px rgba(212, 166, 68, 0.4); }
+
+.github__heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  justify-content: flex-end;
+}
+
+.github__heatmap-legend span {
+  margin: 0 4px;
+}
+
+/* LeetCode Card */
+.github__leetcode-main {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.github__leetcode-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #10B981 0% 30%, 
+    #F5C451 30% 70%, 
+    #EF4444 70% 100%
+  );
+  padding: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 0 24px rgba(245, 196, 81, 0.15);
+}
+
+.github__leetcode-circle::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(#10B981, #F5C451, #EF4444);
+  filter: blur(8px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.github__leetcode-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.github__leetcode-total {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.github__leetcode-label {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.github__leetcode-stats {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.github__leetcode-stat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.github__leetcode-diff { font-weight: 500; }
+.github__leetcode-diff--easy { color: #10B981; }
+.github__leetcode-diff--medium { color: #F5C451; }
+.github__leetcode-diff--hard { color: #EF4444; }
+
+.github__leetcode-stat-total { color: var(--text-tertiary); font-size: 0.875rem; }
+
+.github__leetcode-bar {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.github__leetcode-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.github__leetcode-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  border-radius: var(--radius-full);
+}
+
+.github__leetcode-bg--easy { background: #10B981; box-shadow: 0 0 12px rgba(16, 185, 129, 0.4); }
+.github__leetcode-bg--medium { background: #F5C451; box-shadow: 0 0 12px rgba(245, 196, 81, 0.4); }
+.github__leetcode-bg--hard { background: #EF4444; box-shadow: 0 0 12px rgba(239, 68, 68, 0.4); }
+
+@media (max-width: 768px) {
+  .github__profile-card {
+    flex-direction: column;
+  }
+  
+  .github__profile-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .github__profile-stats {
+    justify-content: center;
+  }
+  
+  .github__profile-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .github__leetcode-main {
+    flex-direction: column;
+  }
+}
+
+.github__chart-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.github__leetcode-note {
+  color: var(--text-secondary, inherit);
+  margin-top: 0.75rem;
+}

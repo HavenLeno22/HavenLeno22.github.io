@@ -1,0 +1,247 @@
+.page-resume {
+  padding-top: calc(var(--navbar-height) + 60px);
+}
+
+.resume__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.resume__title {
+  margin-bottom: 16px;
+}
+
+.resume__subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.resume__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.resume__btn {
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-base);
+}
+
+.resume__btn--primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.resume__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] .resume__btn--primary:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.resume__btn--secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.resume__btn--secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-medium);
+}
+
+.resume__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.resume__preview {
+  padding: 60px;
+  background: var(--bg-card);
+}
+
+[data-theme="light"] .resume__preview {
+  background: #FFFFFF;
+}
+
+.resume__section {
+  margin-bottom: 40px;
+}
+
+.resume__section:last-child {
+  margin-bottom: 0;
+}
+
+.resume__section-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  font-family: var(--font-heading);
+}
+
+.resume__items {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.resume__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.resume__item-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.resume__item-subtitle {
+  font-size: 1rem;
+  color: var(--accent-purple);
+  font-weight: 500;
+}
+
+.resume__item-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.875rem;
+  font-family: var(--font-heading);
+  color: var(--text-tertiary);
+}
+
+.resume__item-date {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.resume__item-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume__item-list li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.resume__item-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-tertiary);
+}
+
+.resume__divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 40px 0;
+}
+
+.resume__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resume__skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resume__skill-cat-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.resume__skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resume__skill-tag {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .resume__skill-tag {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.resume__lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resume__lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume__lang-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.resume__lang-level {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 992px) {
+  .resume__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__preview {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume__item-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .resume__item-meta {
+    align-items: flex-start;
+  }
+
+  .resume__preview {
+    padding: 24px;
+  }
+}
