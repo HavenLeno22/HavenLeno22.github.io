@@ -47,7 +47,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="tools">
-        <button class="btn" type="button" data-open-brief>30-second view</button>
+        <button class="btn" type="button" data-open-brief><span class="label-long">30-second view</span><span class="label-short">30 sec</span></button>
         <button class="btn" type="button" data-open-palette>
           <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M10.4 10.4L14 14" stroke="currentColor" stroke-width="1.6"/></svg>
           <span class="visually-hidden">Search</span> <kbd class="kbd-hint">Ctrl K</kbd>
@@ -68,6 +68,12 @@
         <p class="hero__lede">Full-stack developer. I build web applications end to end, from the database and API to the screen people use.</p>
 
         <div class="hero__field">
+          <!-- Portrait slot: save a square photo (at least 800 x 800) as assets/img/haven.webp,
+               then remove the comment markers around the figure below.
+          <figure class="hero__photo">
+            <img src="/assets/img/haven.webp" width="800" height="800" alt="Haven Leno J">
+          </figure>
+          -->
           <p>Looking for a software engineering internship.</p>
           <div class="actions">
             <a class="btn btn--solid" href="/resume/Haven-Leno-J-Resume.pdf" download>
@@ -92,15 +98,17 @@
       <div class="wrap grid">
         <header class="section__head"><h2 id="experience-title">Experience</h2><p>Internship completed in August 2026.</p></header>
         <div class="section__body">
-          <ol class="entries entries--lead">
+          <ol class="creds creds--lead">
             <li>
               <p class="when">Jun to Aug 2026</p>
+              <span class="logo logo--fill"><img src="/assets/logos/genlab.svg" width="48" height="48" alt=""></span>
               <div>
                 <h3>MERN Stack Developer Intern</h3>
                 <p class="where">GenLab Pvt. Ltd., Nagercoil, on-site</p>
                 <p>Worked on real-world web applications across the MERN stack (MongoDB, Express.js, React.js and Node.js), including API integration and database management.</p>
                 <p class="small">Completion certificate GL/INT/26/183</p>
               </div>
+              <div class="action"><a class="btn" href="/certificates/genlab-internship/">View certificate</a></div>
             </li>
           </ol>
         </div>
@@ -229,57 +237,69 @@
       <div class="wrap grid">
         <header class="section__head"><h2 id="recognition-title">Hackathons and awards</h2></header>
         <div class="section__body">
-          <ol class="entries entries--lead">
+          <ol class="creds">
             <li>
               <p class="when">Sep 2026</p>
+              <span class="logo"><img src="/assets/logos/gravitas.webp" width="48" height="48" alt=""></span>
               <div>
                 <h3>Winner, Implementation Category</h3>
                 <p class="where">Sensora 2.0, graVITas '26, VIT Vellore</p>
                 <p>Won with SurgeGuard, our team's real-time crowd-safety platform. <a href="/work/surgeguard/">Read the case study</a></p>
               </div>
+              <div class="action"><a class="btn" href="/certificates/sensora-2/">View certificate</a></div>
             </li>
             <li>
               <p class="when">2026</p>
+              <span class="logo"><img src="/assets/logos/vit.webp" width="48" height="48" alt=""></span>
               <div>
                 <h3>Participant</h3>
                 <p class="where">Celestia 2.0, VIT Vellore</p>
               </div>
+              <div class="action"><a class="btn" href="https://unstop.com/certificate-preview/b45d35ba-08b8-4441-90f4-a86046a5ddd2" rel="noopener">View certificate</a></div>
             </li>
             <li>
               <p class="when">2025</p>
+              <span class="logo logo--none" aria-hidden="true"></span>
               <div>
                 <h3>Participant</h3>
                 <p class="where">Hack To The Future, Easwari Engineering College</p>
                 <p>Built AgriTrace for the supply-chain transparency track.</p>
               </div>
+              <div class="action"></div>
             </li>
           </ol>
 
           <h3 class="subhead">Certifications</h3>
-          <ol class="entries">
+          <ol class="creds">
             <li>
               <p class="when">Aug 2026</p>
+              <span class="logo logo--fill"><img src="/assets/logos/genlab.svg" width="48" height="48" alt=""></span>
               <div>
                 <h3>Internship completion: MERN Stack Development</h3>
                 <p class="where">GenLab Pvt. Ltd.</p>
                 <p class="small">Certificate GL/INT/26/183</p>
               </div>
+              <div class="action"><a class="btn" href="/certificates/genlab-internship/">View certificate</a></div>
             </li>
             <li>
               <p class="when">Apr 2025</p>
+              <span class="logo"><img src="/assets/logos/scholarhat.webp" width="48" height="48" alt=""></span>
               <div>
                 <h3>C++ Programming Course for Beginners</h3>
                 <p class="where">ScholarHat</p>
-                <p class="small">Certificate WD1C240425, <a href="https://www.scholarhat.com/certificate/verify" rel="noopener">verify it on ScholarHat</a></p>
+                <p class="small">Certificate WD1C240425</p>
               </div>
+              <div class="action"><a class="btn" href="/certificates/scholarhat-cpp/">View certificate</a></div>
             </li>
             <li>
               <p class="when">Jul 2024</p>
+              <span class="logo"><img src="/assets/logos/udemy.svg" width="48" height="48" alt=""></span>
               <div>
                 <h3>The Complete 2024 Web Development Bootcamp</h3>
                 <p class="where">Udemy</p>
-                <p class="small"><a href="https://www.udemy.com/certificate/UC-07568831-d7bd-48e8-a541-47c30a354d30/" rel="noopener">View the certificate</a></p>
+                <p class="small">Certificate UC-07568831-d7bd-48e8-a541-47c30a354d30</p>
               </div>
+              <div class="action"><a class="btn" href="https://www.udemy.com/certificate/UC-07568831-d7bd-48e8-a541-47c30a354d30/" rel="noopener">View certificate</a></div>
             </li>
           </ol>
         </div>
@@ -304,28 +324,34 @@
       <div class="wrap grid">
         <header class="section__head"><h2 id="education-title">Education</h2></header>
         <div class="section__body">
-          <ol class="entries">
+          <ol class="creds">
             <li>
               <p class="when">2024 to 2028</p>
+              <span class="logo"><img src="/assets/logos/srm.webp" width="48" height="48" alt=""></span>
               <div>
                 <h3>B.Tech, Computer Science and Engineering</h3>
                 <p class="where">SRM Institute of Science and Technology, Ramapuram, Chennai</p>
                 <p class="small">CGPA 7.78</p>
               </div>
+              <div class="action"></div>
             </li>
             <li>
               <p class="when">2024</p>
+              <span class="logo logo--none" aria-hidden="true"></span>
               <div>
                 <h3>Higher Secondary (12th)</h3>
                 <p class="where">CSI Matriculation Higher Secondary School, Kanyakumari</p>
               </div>
+              <div class="action"></div>
             </li>
             <li>
               <p class="when">2022</p>
+              <span class="logo logo--none" aria-hidden="true"></span>
               <div>
                 <h3>Secondary (10th)</h3>
                 <p class="where">St. Francis Assisi Matriculation Higher Secondary School, Kanyakumari</p>
               </div>
+              <div class="action"></div>
             </li>
           </ol>
         </div>

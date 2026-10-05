@@ -248,19 +248,27 @@ kbd {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 28px;
   padding: clamp(20px, 2vw, 28px);
   background: var(--field);
   color: var(--on-field);
 }
+.hero__photo {
+  margin: calc(-1 * clamp(20px, 2vw, 28px)) calc(-1 * clamp(20px, 2vw, 28px)) 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+.hero__photo[hidden] { display: none; }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .hero__field p {
   font-size: var(--t-md);
   font-weight: 600;
   line-height: 1.22;
   letter-spacing: -0.012em;
 }
-.hero__field .actions { display: grid; gap: 8px; }
+.hero__field .actions { display: grid; gap: 8px; margin-top: auto; }
 .hero__field .btn {
   width: 100%;
   justify-content: space-between;
@@ -643,3 +651,67 @@ dialog::backdrop { background: rgba(6, 10, 24, 0.55); }
 }
 /* The portrait hardware photo is cropped square so it sits level with its neighbour. */
 .shots .shot--b img { aspect-ratio: 1 / 1; object-fit: cover; object-position: center 62%; }
+
+/* ---------- credentials: one row system for experience, awards, certificates, education ---------- */
+.logo {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.logo img { width: 42px; height: 42px; object-fit: contain; }
+.logo--fill img { width: 100%; height: 100%; }
+.logo--none { background: none; border-color: transparent; }
+
+.creds > li {
+  display: grid;
+  grid-template-columns: 8.5rem 48px minmax(0, 1fr) auto;
+  column-gap: var(--gutter);
+  align-items: start;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+}
+.creds > li:first-child { border-top: 0; padding-top: 0; }
+.creds .when { color: var(--quiet); font-size: var(--t-sm); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.creds h3 { font-size: var(--t-md); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+.creds .where { color: var(--quiet); margin-top: 2px; }
+.creds p { margin-top: 10px; max-width: 60ch; }
+.creds .where + p { margin-top: 10px; }
+.creds .small { font-size: var(--t-sm); color: var(--quiet); margin-top: 8px; }
+.creds .action { justify-self: end; }
+.creds .action .btn { width: 11rem; }
+.creds--lead h3 { font-size: var(--t-lg); letter-spacing: -0.02em; line-height: 1.12; }
+
+/* ---------- certificate pages ---------- */
+.cert-hero .grid { row-gap: 22px; }
+.cert-hero__id { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; }
+.cert-hero__issuer { color: var(--quiet); font-size: var(--t-md); }
+.case-hero h1.cert-hero__title { font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: 0.95; letter-spacing: -0.04em; grid-column: 1 / span 8; }
+.cert-hero .facts { grid-column: 9 / span 4; grid-row: 3 / span 2; }
+.cert-hero .links { grid-column: 1 / span 8; }
+.cert-view { padding-bottom: clamp(48px, 6vw, 88px); }
+.cert-view img { width: 100%; border: 1px solid var(--rule); background: #fff; }
+.cert-view figcaption { margin-top: 12px; color: var(--quiet); font-size: var(--t-sm); max-width: 70ch; }
+
+@media (max-width: 1100px) {
+  .case-hero h1.cert-hero__title, .cert-hero .links { grid-column: 1 / -1; }
+  .cert-hero .facts { grid-column: 1 / -1; grid-row: auto; }
+}
+@media (max-width: 760px) {
+  .creds > li { grid-template-columns: 48px minmax(0, 1fr); row-gap: 10px; column-gap: 16px; }
+  .creds .when { grid-column: 1 / -1; padding-top: 0; }
+  .creds .action { grid-column: 2; justify-self: start; }
+}
+
+.label-short { display: none; }
+@media (max-width: 480px) {
+  .masthead__inner { gap: 12px; }
+  .tools { gap: 6px; }
+  .label-long { display: none; }
+  .label-short { display: inline; }
+}
