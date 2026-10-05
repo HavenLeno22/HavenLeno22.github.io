@@ -1,0 +1,32 @@
+export const certifications = [
+  {
+    id: 2,
+    title: 'Internship Completion: MERN Stack Development',
+    issuer: 'GenLab Pvt. Ltd.',
+    date: 'August 14, 2026',
+    credentialId: 'GL/INT/26/183',
+    description: 'Two-month internship (June 15 to August 14, 2026) building web applications with MongoDB, Express.js, React.js and Node.js.',
+    category: 'Internship',
+  },
+  {
+    id: 1,
+    title: 'The Complete 2024 Web Development Bootcamp',
+    issuer: 'Udemy',
+    date: 'July 23, 2024',
+    credentialId: 'UC-07568831-d7bd-48e8-a541-47c30a354d30',
+    verifyUrl: 'https://www.udemy.com/certificate/UC-07568831-d7bd-48e8-a541-47c30a354d30/',
+    description: 'The Complete Full-Stack Web Development Bootcamp taught by Dr. Angela Yu.',
+    category: 'Full-Stack',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg',
+  },
+  {
+    id: 3,
+    title: 'C++ Programming Course For Beginners',
+    issuer: 'ScholarHat',
+    date: 'April 24, 2025',
+    credentialId: 'WD1C240425',
+    verifyUrl: 'https://www.scholarhat.com/certificate/verify',
+    description: 'Fundamentals of C++ programming.',
+    category: 'Programming',
+  },
+];

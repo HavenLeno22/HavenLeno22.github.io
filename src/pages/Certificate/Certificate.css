@@ -1,0 +1,142 @@
+.cert-page {
+  padding-top: calc(var(--navbar-height) + 64px);
+  padding-bottom: 96px;
+}
+
+.cert-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  transition: color var(--transition-base);
+}
+
+.cert-page__back:hover {
+  color: var(--accent-gold);
+}
+
+.cert-page__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.cert-page__issuer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+}
+
+.cert-page__title {
+  margin-top: 22px;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.cert-page__missing {
+  margin: 16px 0 24px;
+  color: var(--text-secondary);
+}
+
+.cert-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.cert-page__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: all var(--transition-base);
+}
+
+.cert-page__btn:hover {
+  border-color: var(--accent-gold);
+}
+
+.cert-page__btn--primary {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.cert-page__btn--primary:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #1a1a1a;
+}
+
+.cert-page__facts {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  font-size: 0.9375rem;
+}
+
+.cert-page__facts:hover {
+  transform: none;
+}
+
+.cert-page__facts div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 12px;
+}
+
+.cert-page__facts dt {
+  color: var(--text-tertiary);
+}
+
+.cert-page__facts dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.cert-page__figure {
+  margin: 56px 0 0;
+}
+
+.cert-page__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-xl);
+  background: #fff;
+}
+
+.cert-page__figure figcaption {
+  margin-top: 16px;
+  color: var(--text-tertiary);
+  font-size: 0.9375rem;
+  max-width: 70ch;
+}
+
+.cert-page__figure figcaption a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .cert-page__head {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

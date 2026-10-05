@@ -1,0 +1,16 @@
+# Haven Leno J
+
+> Full-stack developer and B.Tech Computer Science student at SRM IST, Chennai, open to software engineering internships. MERN Stack Developer Intern at GenLab (June to August 2026). Winner, Implementation Category, Sensora 2.0 at VIT Vellore (September 2026).
+
+## Links
+
+- [Portfolio](https://havenleno22.github.io/)
+- [Resume (PDF)](https://havenleno22.github.io/resume/Haven-Leno-J-Resume.pdf)
+- [GitHub](https://github.com/HavenLeno22)
+- [LinkedIn](https://www.linkedin.com/in/havenleno)
+
+## Projects
+
+- [SurgeGuard](https://github.com/HavenLeno22/surgeguard-crowd-safety): real-time crowd-safety platform (Python, YOLO, FastAPI, React, Arduino)
+- [RepX](https://github.com/HavenLeno22/RepX): live 1v1 fitness battles with verified reps (React, NestJS, Socket.IO, MediaPipe)
+- [Multi-Mode AI Translator](https://github.com/HavenLeno22/multi-mode-ai-translator): languages, Morse code and voice (Flask, Gemini API)

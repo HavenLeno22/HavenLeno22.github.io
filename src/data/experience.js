@@ -1,0 +1,77 @@
+export const experiences = [
+  {
+    id: 1,
+    title: 'MERN Stack Developer Intern',
+    company: 'GenLab Pvt. Ltd.',
+    location: 'Nagercoil, Tamil Nadu (on-site)',
+    period: 'Jun to Aug 2026',
+    description: 'Worked on real-world web applications across the MERN stack, including API integration and database management.',
+    highlights: [
+      'Built with MongoDB, Express.js, React.js and Node.js',
+      'Completion certificate GL/INT/26/183',
+    ],
+    technologies: ['MongoDB', 'Express', 'React', 'Node.js'],
+    type: 'work',
+    logo: 'logos/genlab.svg',
+    logoFill: true,
+    certificate: 'genlab-internship',
+  },
+  {
+    id: 2,
+    title: 'Winner, Implementation Category',
+    company: "Sensora 2.0, graVITas '26",
+    location: 'VIT Vellore',
+    period: 'Sep 2026',
+    description: 'Won with SurgeGuard, a real-time crowd-safety platform built as a team.',
+    highlights: [
+      'Live people detection and tracking from an ordinary phone camera (YOLO + ByteTrack)',
+      'An explainable Crowd Stability Index and a decision engine that gives operators plain guidance',
+      'A React Command Center, a phone alert app for security staff, and Arduino alert hardware',
+    ],
+    technologies: ['Python', 'FastAPI', 'WebSockets', 'React', 'Arduino'],
+    type: 'hackathon',
+    logo: 'logos/gravitas.webp',
+    certificate: 'sensora-2',
+  },
+  {
+    id: 3,
+    title: 'Member',
+    company: 'LOGIC PLAY',
+    location: 'Chennai, Tamil Nadu (on-site)',
+    period: 'Since Sep 2026',
+    description: "A student tech club at SRM Ramapuram that turns classroom theory into applied projects, and takes teams to hackathons.",
+    highlights: [],
+    technologies: [],
+    type: 'club',
+    logo: 'logos/logicplay.webp',
+    logoFill: true,
+  },
+];
+
+export const education = [
+  {
+    id: 1,
+    degree: 'B.Tech, Computer Science and Engineering',
+    institution: 'SRM Institute of Science and Technology, Ramapuram, Chennai',
+    period: '2024 to 2028',
+    gpa: '7.78',
+    logo: 'logos/srm.webp',
+    highlights: [
+      'Member of LOGIC PLAY, the campus hackathon club',
+    ],
+  },
+  {
+    id: 2,
+    degree: 'Higher Secondary (12th)',
+    institution: 'CSI Matriculation Higher Secondary School, Kanyakumari',
+    period: '2024',
+    highlights: [],
+  },
+  {
+    id: 3,
+    degree: 'Secondary (10th)',
+    institution: 'St. Francis Assisi Matriculation Higher Secondary School, Kanyakumari',
+    period: '2022',
+    highlights: [],
+  },
+];
