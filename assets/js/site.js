@@ -188,6 +188,8 @@
     { group: "Projects", label: "Student Expense Tracker", hint: "GitHub", run: go("https://github.com/HavenLeno22/student-expense-tracker") },
     { group: "Actions", label: "Open the 30-second view", run: openBrief },
     { group: "Actions", label: "Download resume (PDF)", run: go(RESUME) },
+    { group: "Actions", label: "View internship certificate", hint: "GenLab", run: go("/certificates/genlab-internship/") },
+    { group: "Actions", label: "View Sensora 2.0 certificate", hint: "Winner", run: go("/certificates/sensora-2/") },
     { group: "Actions", label: "Copy email address", hint: EMAIL, run: copyEmail },
     { group: "Actions", label: "Switch theme", hint: "Light or dark", run: toggleTheme },
     { group: "Elsewhere", label: "GitHub", hint: "HavenLeno22", run: go("https://github.com/HavenLeno22") },
