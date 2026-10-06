@@ -15,6 +15,7 @@ export const projects = [
       'Built as a team of three',
     ],
     role: 'Hackathon team project',
+    contribution: 'The AI pipeline (YOLO + ByteTrack tracking and the stability score), the phone alert app and the Arduino alert hardware',
     technologies: ['Python', 'YOLO', 'ByteTrack', 'FastAPI', 'WebSockets', 'React', 'TypeScript', 'Arduino'],
     github: 'https://github.com/HavenLeno22/surgeguard-crowd-safety',
     featured: true,

@@ -49,8 +49,8 @@ export default function About() {
               </p>
               <p>
                 In 2026 I completed a MERN stack internship at GenLab, and my team won the
-                Implementation Category at Sensora 2.0, VIT Vellore, with SurgeGuard. I'm a
-                member of LOGIC PLAY, our campus hackathon club.
+                Implementation Category at Sensora 2.0, VIT Vellore, with SurgeGuard. In LOGIC PLAY,
+                our campus hackathon club, I compete with club teams, help run events and mentor juniors.
               </p>
               <p>
                 Right now I'm sharpening my DSA on LeetCode. Away from code, it's music,

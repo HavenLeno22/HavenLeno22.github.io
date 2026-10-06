@@ -196,6 +196,12 @@ export default function ProjectDetail() {
                     <div className="project-sidebar__value">{project.role}</div>
                   </div>
                 )}
+                {project.contribution && (
+                  <div className="project-sidebar__group">
+                    <h3 className="project-sidebar__label">My part</h3>
+                    <div className="project-sidebar__value">{project.contribution}</div>
+                  </div>
+                )}
 
                 {project.status && (
                   <div className="project-sidebar__group">
